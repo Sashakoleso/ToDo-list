@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-// import shortid from 'shortid';
 
 export default class TodoEditor extends Component {
   state = {
@@ -25,7 +24,6 @@ export default class TodoEditor extends Component {
           type="text"
           value={value}
           id={this.id}
-          // checked={done}
           onChange={this.handleChange}
         />
       </form>

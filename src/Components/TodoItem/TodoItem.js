@@ -2,16 +2,22 @@ import React from 'react';
 import T from 'prop-types';
 import TodoList from '../TodoList/TodoList';
 
-const TodoItem = ({ newTask, deletLI, isDone }) => {
+const TodoItem = ({ newTask, deleteLi, isDone, modalOpen }) => {
   return (
     <ul>
-      <TodoList newTask={newTask} deletLI={deletLI} isDone={isDone} />
+      <TodoList
+        newTask={newTask}
+        deleteLi={deleteLi}
+        isDone={isDone}
+        modalOpen={modalOpen}
+      />
     </ul>
   );
 };
 TodoItem.propTypes = {
   newTask: T.arrayOf(T.shape({})).isRequired,
-  deletLI: T.func.isRequired,
+  deleteLi: T.func.isRequired,
   isDone: T.func.isRequired,
+  modalOpen: T.func.isRequired,
 };
 export default TodoItem;
